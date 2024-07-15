@@ -1,0 +1,43 @@
+Parallel will help in viewing two different routes to render in same page
+
+folder structure for basic parallel routing : 
+    - product (product)
+        - product detail (@details) Note: @ is mandatory in naming convention
+            - page.tsx
+        - related products (@related)
+            - page.tsx
+        - layout.tsx 
+            code :
+
+            function layout({ details, related }){
+                return (
+                    <>
+                        {details} // Naming should match the folder name
+                        <hr />
+                        {latest} // Naming should match the folder name
+                    </>
+                )
+            }
+
+
+folder structure for parallel with nested routing :
+    - product (product)
+        - product detail (@details)
+            - [category] // Nested Route for details
+                - page.tsx
+            - page.tsx
+        - related products (@related)
+            - default.tsx // should be default because any one of the page should have nested route then nextjs will check for only one nested route 
+                            so we will get 404 page if other page doesn't have nested route. To fix it keep page which not has nested route to default.tsx name
+        - layout.tsx 
+            code :
+
+            function layout({ details, related }){
+                return (
+                    <>
+                        {details} // Naming should match the folder name
+                        <hr />
+                        {latest} // Naming should match the folder name
+                    </>
+                )
+            }

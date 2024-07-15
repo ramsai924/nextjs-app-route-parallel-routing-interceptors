@@ -1,0 +1,19 @@
+Interceptors in next js is helpful for creating modal in next js. And we can share that link to see the modal.
+
+File naming should be like : 
+
+-app
+|
+------product
+        |
+        ------ @modalDetails
+        |           |
+        |           -------(.)image --------------------------------------------| (point to the component which should be in the modal)
+        |           |           |                                               |
+        |           |            -----page.tsx                                  |
+        |           |                                                           |
+        |           -------default.tsx (while should return null)               |
+        ------image <-----------------------------------------------------------|
+        |        |
+        |        -----page.tsx
+        ------page.tsx

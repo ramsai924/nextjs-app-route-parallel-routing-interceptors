@@ -1,0 +1,19 @@
+.header-main{
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.header-nav-left > a {
+    padding: 0 10px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.header-nav-right > a{
+    padding: 0 10px;
+    text-decoration: none;
+    font-weight: 500;
+}
